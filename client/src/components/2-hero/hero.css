@@ -1,0 +1,113 @@
+/* ====================
+table of contents
+====================
+1-Left Section 
+2- Right section ==> animation
+==================== */
+
+
+
+
+
+
+
+
+
+section.hero {
+    margin-top: 3rem;
+
+}
+
+/* 
+====================
+1-left section
+==================== */
+section.hero .parent-avater.flex {
+    align-items: center ;
+    gap: 0.8rem;
+    min-height: 88px;
+
+}
+
+section.hero .left-section {
+    flex-grow: 1;
+}
+
+section.hero .icon-verified {
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: -3rem;
+
+}
+
+section.hero .avater {
+    width: 88px;
+    height: 4.9rem;
+    border-radius: 50%;
+    border: 1px solid var(--mznblue);
+    padding: 1px;
+
+    box-shadow: 2px 2px 40px var(--mznblue) inset;
+}
+
+section.hero h1.title {
+    font-size: 2.85rem;
+    line-height: 3.3rem;
+    margin: 24px 0;
+    color: var(--title);
+    animation: top 3s 1;
+
+}
+
+section.hero p.sub-title {
+    color: var(--subtitle);
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    margin-bottom: 32px;
+}
+
+section.hero .all-icons {
+    font-size: 1.3rem;
+    gap: 1.5rem;
+    color: var(--subtitle);
+
+}
+
+.all-icons .icon {
+    animation: mymove 3s 1;
+
+}
+
+section.hero .all-icons .icon:hover {
+    font-size: 1.4rem;
+    transition: .3s;
+    cursor: pointer;
+    color: var(--icon-hover);
+}
+
+
+section.hero .all-icons .icon-x {
+    background-color: var(--subtitle);
+    color: var(--secondary);
+    padding: 2.2px;
+    border-radius: 5px;
+}
+section.hero .all-icons .icon-x:hover {
+    /* font-size: 1.1rem; */
+    color: var(--secondary);
+    background-color: var(--icon-hover);
+}
+
+/* 
+====================================
+2- Right section ==> animation
+==================================== */
+
+section.hero .animation{
+    width: 100%;
+    translate: 100px 55px;
+}
+
+@media (max-width: 1250px ){
+    section.hero .animation  {display: none;}
+ }

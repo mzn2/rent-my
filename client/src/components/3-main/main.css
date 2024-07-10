@@ -1,0 +1,215 @@
+/* 
+=========================
+table of contents
+=========================
+1-Left Section ==>Button 
+2- Right section ==> Card  Or 2- Card js to
+
+ 3- Responsive Design (media query) 
+======================== */
+
+main.flex{
+    gap: 2rem;
+    align-items: start;
+}
+
+
+/* =======================
+1-Left Section ==>Button 
+======================= */
+
+
+
+main section.left-section.flex{
+    flex-direction: column;
+    gap: 10px;
+}
+
+main section.left-section.flex button{
+    background-color: #24252e;
+    width: 10rem;
+    padding: 0.75rem 0;
+    text-align: center;
+    font-size: 1.05rem;
+    text-transform: capitalize;  /*  يخلي اول الاحرف كبتل*/
+    opacity: 0.69;
+    border-radius: 10px;
+    transition: 0.2s;
+    animation: mymove 1s 1;
+
+    }
+main section.left-section.flex button:hover{
+    opacity: 1;
+}
+
+main section.left-section.flex button.active{
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    padding: 0.8rem 0;
+    border: 1px solid var(--blue);
+}
+.light main section.left-section.flex button.active{
+    border: 1px solid #000;
+
+}
+
+/* 
+===========================
+2- Right section ==> Card
+=========================== */
+
+main section.right-section.flex{
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 16px;
+    row-gap: 2rem;
+}
+
+
+.card{
+    border: 1px solid var(--mznblue);
+    border-radius: 5px;
+    background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05))  ;
+    transition: .3s;
+    animation: mymove 1s 1; 
+    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.7) , 1px 1px 1px rgba(0, 0, 0, 0.15);
+    
+
+}
+ 
+.light .card , .light .card:hover{
+    border: none;
+}
+ 
+.card:hover{
+    border: 1px solid var(--blue);
+    rotate: 1deg;
+    scale: 1.01;
+    cursor: pointer;
+    box-shadow: none;
+}
+.light .card:hover{
+    background-color: rgb(246 , 246  , 246 );
+
+}
+
+.card h1 , .card p  {
+    color: var(--subtitle);
+    margin: 10px;
+    text-align: right;
+    right:  22rem;
+}
+
+main section.right-section.flex  .card img{
+    border-radius: 5px;
+
+}
+
+main section.right-section.flex  .card .box{
+    padding: 0.3rem 1rem;
+}
+main section.right-section.flex  .card .box .title{
+    color: var(--title);
+}
+
+main section.right-section.flex  .card .box .sub-title{
+    color:  var(--subtitle);
+    font-size: 0.8rem;
+    margin-top: 0.7rem ;
+    margin-bottom: 1.1rem;
+}
+/*
+===========================
+2- Right section ==> Card project js
+=========================== */
+
+main section.right-section.flex  .card  .body2 {
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+main section.right-section.flex  .card .body2 .wrapper{
+    height: 100px;
+    width: 360px;
+    cursor: default;
+    background: linear-gradient(135deg , var(--subtitle) , #60d6da, var(--mznblue));
+    border-radius: 5px;
+    animation: animate 1.5s linear infinite;
+}
+main section.right-section.flex .card  .body2 .wrapper .display ,
+main section.right-section.flex .card  .body2 .wrapper span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+ 
+
+main section.right-section.flex .card  .body2 .wrapper .display{    
+    z-index: 999;
+    background:  var(--secondary);
+    border-radius: 6px;
+    height: 85px;
+    width: 345px;
+    text-align: center;
+}
+
+main section.right-section.flex .card  .body2 .wrapper .display #time0{
+    line-height: 85px ;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg , var(--subtitle) , #60d6da, var(--mznblue));
+    background-clip: text ;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+
+}
+
+@keyframes animate {
+    100% { filter:  hue-rotate(260deg);}
+}
+main section.right-section.flex .card  .body2 .wrapper span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius: 5px;
+}
+main section.right-section.flex .card  .body2 .wrapper span:first-child{
+    filter: blur(10px);
+}
+main section.right-section.flex .card  .body2 .wrapper span:last-child {
+    filter: blur(20px);
+}
+
+/*
+===================================
+ 3- Responsive Design (media query) 
+ =====================================*/
+
+@media (max-width:655px){
+    main.flex{
+        flex-direction: column;
+        gap: 2.64rem;
+        align-items: center;
+    }
+    main section.left-section.flex{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    main section.left-section.flex button{
+        width: 7rem;
+        padding: 0.8rem 0;
+        font-size: 0.9rem;
+      
+        }
+}
+
+
+
